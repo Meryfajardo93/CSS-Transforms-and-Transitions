@@ -237,8 +237,6 @@ body {
 }
 
 
-
-
 .circle {
     background: #55C2D8;
     border-radius: 100%;
@@ -266,19 +264,19 @@ body {
 }
 
 .bt2 {
-    transition: background 1s ease-in,
-                transform 1s ease-in-out;
+    transition: background 3s ease-in,
+                transform 5s ease-in-out;
 }
 
 .circle:hover {
-    transform: scale(0.9);
-    background: white;
-
-}
+  transform: scale(0.9);
+  background: white; 
+   
+} 
 
 .triangle:hover {
     border-left: 40px solid #55C2D8;
-}
+} 
 
 .background4 {
     background: url(assets/4.png);
