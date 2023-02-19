@@ -63,6 +63,31 @@ body {
     margin-top: 100px;
 }
 
+
+.container img:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.5);
+
+}
+
+
+.flip-logo-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-logo:hover .flip-logo-inner {
+    perspective: 1000px;
+    transform: rotateY(180deg);
+
+}
+
+
 .background1 p {
     font-size: 24px;
     font-style: normal;
@@ -111,8 +136,21 @@ body {
     gap: 4rem;
     margin-left: 10%;
     margin-right: 10%;
-    
 
+
+}
+
+
+.but {
+   
+    transform-origin: left;
+    transition: all 1s linear;
+}
+
+.but:hover {
+    transform: rotate(15deg); 
+
+    
 }
 
 .container2-p {
@@ -124,10 +162,11 @@ body {
 }
 
 
-.container2-p, .container2-p1 {
+.container2-p,
+.container2-p1 {
     line-height: 22px;
     font-size: 16px;
-  
+
     width: 408px;
     height: 172px;
     left: 149px;
@@ -194,6 +233,51 @@ body {
     right: 14%;
     left: 46%;
     right: 46%;
+    margin-top: 10%;
+}
+
+
+
+
+.circle {
+    background: #55C2D8;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+
+    margin-inline: 47%;
+    position: absolute;
+   
+    
+}
+
+.triangle {
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+
+    margin-inline: 50%;
+    position: relative;
+    top:40px
+  
+   
+}
+
+.bt2 {
+    transition: background 1s ease-in,
+                transform 1s ease-in-out;
+}
+
+.circle:hover {
+    transform: scale(0.9);
+    background: white;
+
+}
+
+.triangle:hover {
+    border-left: 40px solid #55C2D8;
 }
 
 .background4 {
@@ -269,11 +353,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  
+
     .nav-list {
         flex-direction: column;
         gap: 1rem;
-           
+
         margin-right: 20px;
         padding: 0;
         list-style: none;
@@ -282,14 +366,14 @@ body {
         left: 100%;
         transition: left;
         display: none;
-        }
-        
+    }
+
     .nav-list li:hover {
         background: none;
         width: max-content;
         color: #55C2D8;
-       
-        }
+
+    }
 
     .nav_toggle {
         color: white;
@@ -298,61 +382,54 @@ body {
         font-size: 30px;
         padding: 0 20px;
         line-height: 60px;
-        
+
         display: block;
         position: relative;
         left: 200px;
 
-        
-        }
 
-        .container3 {
-            flex-direction: column;
-            font-style: normal;
-            text-align: center;
-        
-        }
-        
-        .background3 img {
-            width: min-content;
-            height: 100px;
-        }
+    }
 
-        .element {
-            position: absolute;
-            left: 50px;
-            font-size: 20px;
-        }
+    .container3 {
+        flex-direction: column;
+        font-style: normal;
+        text-align: center;
 
-        .container2 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        
-        }
+    }
 
-        .container2-p, .container2-p1 {
-            line-height: 22px;
-            font-size: 16px;
-          
-            width: 408px;
-            height: 172px;
-            left: 149px;
-            top: 1148px;
+    .background3 img {
+        width: min-content;
+        height: 100px;
+    }
 
-        }
+    .element {
+        position: absolute;
+        left: 50px;
+        font-size: 20px;
+    }
 
-        .logo {
-            margin-left: 0%;
-        }
+    .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
 
-        }
-    
+    }
 
+    .container2-p,
+    .container2-p1 {
+        line-height: 22px;
+        font-size: 16px;
 
-    
-        
-    
+        width: 408px;
+        height: 172px;
+        left: 149px;
+        top: 1148px;
 
+    }
 
+    .logo {
+        margin-left: 0%;
+    }
+
+}
